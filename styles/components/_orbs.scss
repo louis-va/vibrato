@@ -1,0 +1,38 @@
+@use '../util/variables' as *;
+
+.orb {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+
+    &.orb-orange {
+        background: radial-gradient(50% 50% at 50% 50%, $light-orange 50%, $light-orange-a0 100%);
+    }
+
+    &.orb-blue {
+        background: radial-gradient(50% 50% at 50% 50%, $light-blue 50%, $light-blue-a0 100%);
+    }
+
+    &.orb-green {
+        background: radial-gradient(50% 50% at 50% 50%, $light-green 50%, $light-green-a0 100%);
+    }
+
+    &.orb-1 {
+        width: 60%;
+        bottom: 0;
+        transform: translate(0%, 50%);
+    }
+
+    &.orb-2 {
+        width: 60%;
+        top: 0;
+        left: 0;
+        transform: translate(-30%, -30%);
+    }
+
+    &.orb-3 {
+        width: 80%;
+        top: 0;
+        right: 0;
+        transform: translate(30%, -30%);
+    }
+}

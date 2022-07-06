@@ -4,7 +4,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 120px;
 
     img {
         height: 2.5rem;
@@ -14,13 +14,7 @@ header {
         ul {
             list-style-type: none;
             display: flex;
-            gap: $size-2xl;
-
-            a {
-                text-decoration: none;
-                color: $dark-blue;
-            }
+            gap: 1.5rem;
         }
     }
 }
-

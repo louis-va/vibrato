@@ -26,4 +26,12 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

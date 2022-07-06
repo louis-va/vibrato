@@ -1,11 +1,14 @@
+@use '../util/variables' as *;
+
 :root {
     font-family: 'Rubik';
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
+    color: $dark-blue;
 }
 
 #main {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
-    padding: 0rem 2rem;
+    padding: 0 2rem;
 }

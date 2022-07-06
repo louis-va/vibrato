@@ -3,6 +3,9 @@
 @use 'base/normalize';
 @use 'base/global';
 @use 'components/header';
+@use 'components/intro';
+@use 'components/buttons';
+@use 'components/orbs';
 
 @font-face {
     font-family: "Rubik";
