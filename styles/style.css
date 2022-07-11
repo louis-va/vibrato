@@ -15,7 +15,7 @@
 
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
+  line-height: 1.625rem;
 }
 
 .text-xl {
@@ -31,6 +31,10 @@
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.mb-0 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-1 {
@@ -49,12 +53,24 @@
   margin-bottom: 2rem;
 }
 
+.mb-6 {
+  margin-bottom: 3rem;
+}
+
 .mb-8 {
   margin-bottom: 4rem;
 }
 
+.mb-12 {
+  margin-bottom: 6rem;
+}
+
 .mb-16 {
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
+}
+
+.mt-0 {
+  margin-top: 0.25rem;
 }
 
 .mt-1 {
@@ -73,8 +89,16 @@
   margin-top: 2rem;
 }
 
+.mt-6 {
+  margin-top: 3rem;
+}
+
 .mt-8 {
   margin-top: 4rem;
+}
+
+.mt-12 {
+  margin-top: 6rem;
 }
 
 .mt-16 {
@@ -83,6 +107,30 @@
 
 .bold {
   font-weight: 500;
+}
+
+.lighter {
+  color: rgba(8, 3, 46, 0.6);
+}
+
+.z-index-0 {
+  position: relative;
+  z-index: 0;
+}
+
+.z-index-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.z-index-2 {
+  position: relative;
+  z-index: 2;
+}
+
+.z-index-3 {
+  position: relative;
+  z-index: 3;
 }
 
 *, *::before, *::after {
@@ -134,6 +182,7 @@ a {
   max-width: 1200px;
   margin: auto;
   padding: 0 2rem;
+  overflow: hidden;
 }
 
 header {
@@ -156,7 +205,6 @@ header nav ul {
 }
 .intro .background {
   position: absolute;
-  z-index: 0;
   height: 100%;
   width: 100%;
   border-radius: 10px;
@@ -167,10 +215,8 @@ header nav ul {
 }
 .intro .content {
   position: relative;
-  z-index: 1;
   display: flex;
   gap: 2rem;
-  height: 100%;
   padding: 0 2rem;
 }
 .intro .content .title {
@@ -186,56 +232,63 @@ header nav ul {
 }
 
 .button {
+  display: inline-flex;
+  align-items: center;
   font-size: 1.125rem;
   font-weight: 500;
   padding: 0.25rem 1.125rem;
   border: 3px solid rgba(8, 3, 46, 0.3);
   border-radius: 3rem;
-  transition: border ease 150ms;
+  transition: border ease 100ms;
 }
 .button img.arrow {
-  position: relative;
-  display: inline-block;
   width: 1rem;
-  top: 0.1rem;
   opacity: 0;
-  margin-left: -1.25rem;
-  transition: margin 150ms ease, opacity 150ms cubic-bezier(0.25, 1, 0.5, 1);
+  margin-left: -1rem;
+  transition: margin 100ms ease, opacity 100ms cubic-bezier(0.25, 1, 0.5, 1);
 }
-@media (hover: hover) and (pointer: fine) {
-  .button:hover {
-    border: 3px solid rgba(8, 3, 46, 0.6);
-  }
-  .button:hover img.arrow {
-    opacity: 1;
-    margin-left: 0.25rem;
-    transition: margin 150ms ease-out, opacity 150ms cubic-bezier(0.5, 0, 0.75, 0);
-  }
+.button.small {
+  font-size: 0.875rem;
+  padding: 0.25rem 1rem;
+}
+.button.small img.arrow {
+  width: 0.8rem;
+  margin-left: -0.875rem;
 }
 .button:active {
-  border: 3px solid rgba(8, 3, 46, 0.6);
+  border: 3px solid rgb(8, 3, 46);
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:hover img.arrow {
+    opacity: 1;
+    margin-left: 0.5rem;
+    transition: margin 100ms ease-out, opacity 100ms cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  .button:hover.small img.arrow {
+    margin-left: 0.4rem;
+  }
 }
 
 .orb {
   position: absolute;
   aspect-ratio: 1/1;
 }
-.orb.orb-orange {
+.orb.orange {
   background: radial-gradient(50% 50% at 50% 50%, rgb(255, 241, 231) 50%, rgba(255, 241, 231, 0) 100%);
 }
-.orb.orb-blue {
+.orb.blue {
   background: radial-gradient(50% 50% at 50% 50%, rgb(243, 241, 255) 50%, rgba(243, 241, 255, 0) 100%);
 }
-.orb.orb-green {
+.orb.green {
   background: radial-gradient(50% 50% at 50% 50%, rgb(236, 249, 241) 50%, rgba(236, 249, 241, 0) 100%);
 }
 .orb.orb-1 {
   width: 60%;
   bottom: 0;
-  transform: translate(0%, 50%);
+  transform: translate(20%, 50%);
 }
 .orb.orb-2 {
-  width: 60%;
+  width: 50%;
   top: 0;
   left: 0;
   transform: translate(-30%, -30%);
@@ -245,6 +298,48 @@ header nav ul {
   top: 0;
   right: 0;
   transform: translate(30%, -30%);
+}
+.orb.orb-4 {
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.orb.orb-5 {
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.features .title {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+.features .feature {
+  display: flex;
+  gap: 2rem;
+}
+.features .feature img.image-feature {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.features .feature .column {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.features .feature .text {
+  padding: 3rem 2rem;
+}
+.features .feature .background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 @font-face {

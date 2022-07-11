@@ -1,3 +1,5 @@
+@use '../util/variables' as *;
+
 .text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -15,7 +17,7 @@
 
 .text-lg	{
     font-size: 1.125rem;
-    line-height: 1.75rem;
+    line-height: 1.625rem;
 }
 
 .text-xl	{
@@ -31,6 +33,10 @@
 .text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+}
+
+.mb-0 {
+    margin-bottom: .25rem;
 }
 
 .mb-1 {
@@ -49,12 +55,24 @@
     margin-bottom: 2rem;
 }
 
+.mb-6 {
+    margin-bottom: 3rem;
+}
+
 .mb-8 {
     margin-bottom: 4rem;
 }
 
+.mb-12 {
+    margin-bottom: 6rem;
+}
+
 .mb-16 {
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
+}
+
+.mt-0 {
+    margin-top: .25rem;
 }
 
 .mt-1 {
@@ -73,8 +91,16 @@
     margin-top: 2rem;
 }
 
+.mt-6 {
+    margin-top: 3rem;
+}
+
 .mt-8 {
     margin-top: 4rem;
+}
+
+.mt-12 {
+    margin-top: 6rem;
 }
 
 .mt-16 {
@@ -83,4 +109,28 @@
 
 .bold {
     font-weight: 500;
+}
+
+.lighter {
+    color: $dark-blue-a60;
+}
+
+.z-index-0 {
+    position: relative;
+    z-index: 0;
+}
+
+.z-index-1 {
+    position: relative;
+    z-index: 1;
+}
+
+.z-index-2 {
+    position: relative;
+    z-index: 2;
+}
+
+.z-index-3 {
+    position: relative;
+    z-index: 3;
 }

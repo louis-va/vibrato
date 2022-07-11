@@ -1,0 +1,37 @@
+@use '../util/variables' as *;
+
+.features {
+    .title {
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .feature {
+        display: flex;
+        gap: 2rem;
+
+        img.image-feature {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .column {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .text {
+            padding: 3rem 2rem;
+        }
+
+        .background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

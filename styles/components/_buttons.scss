@@ -1,35 +1,49 @@
 @use '../util/variables' as *;
 
 .button {
+    display: inline-flex;
+    align-items: center;
     font-size: 1.125rem;
     font-weight: 500;
     padding: .25rem 1.125rem;
     border: 3px solid $dark-blue-a30;
     border-radius: 3rem;
-    transition: border ease 150ms;
+    transition: border ease 100ms;
 
     img.arrow {
-        position: relative;
-        display: inline-block;
         width: 1rem;
-        top: .1rem;
         opacity: 0;
-        margin-left: -1.25rem;
-        transition: margin 150ms ease, opacity 150ms cubic-bezier(0.25, 1, 0.5, 1);
+        margin-left: -1rem;
+        transition: margin 100ms ease, opacity 100ms cubic-bezier(0.25, 1, 0.5, 1);
     }
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            border: 3px solid $dark-blue-a60;
 
-            img.arrow {
-                opacity: 1;
-                margin-left: .25rem;
-                transition: margin 150ms ease-out, opacity 150ms cubic-bezier(0.5, 0, 0.75, 0);
-            }
+    &.small {
+        font-size: .875rem;
+        padding: .25rem 1rem;
+
+        img.arrow {
+            width: .8rem;
+            margin-left: -.875rem;
         }
     }
 
     &:active {
-        border: 3px solid $dark-blue-a60;
+        border: 3px solid $dark-blue;
+    }
+    
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            img.arrow {
+                opacity: 1;
+                margin-left: .5rem;
+                transition: margin 100ms ease-out, opacity 100ms cubic-bezier(0.5, 0, 0.75, 0);
+            }
+
+            &.small {
+                img.arrow {
+                    margin-left: .4rem;
+                }
+            }
+        }
     }
 }
